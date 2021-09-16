@@ -1,8 +1,7 @@
 import turtle, random
 t = turtle.Turtle()
 t.speed(0)
-
-
+turtle.screensize(400,400)
 '''t.begin_fill()
 t.fillcolor('green')
 for n in range(10):
@@ -24,7 +23,7 @@ for n in range(10):
 
 #random drawing
 def random_color():
-    color = random.randint(0, 255*255*256)
+    color = random.randint(128*1*1, 128*256*256)
     hex_color = hex(color)
     str_hex_color = f'#{(6-len(str(hex_color)[2:]))*"0"}{str(hex_color)[2:]}'
     return str_hex_color
@@ -32,15 +31,21 @@ def random_color():
 for i in range(10):
     t.begin_fill()
     t.fillcolor(random_color())
-    t.left(random.randint(0,90))
-    t.forward(50)
+    t.penup()
+    t.setpos(random.randint(-200,200), random.randint(-200,200))
+    t.pendown()
     n = random.randint(1,20)
-    l = random.randint(30,90)
-    for i in range(n):
-        t.forward(l)
-        t.right(360/n)
+    l = random.randint(5,20)
+    r = random.randint(1,15)
+    for i in range(r):
+        t.left(360/r)
+        for i in range(n):
+            t.forward(l)
+            t.right(360/n)
     t.end_fill()
 
+t.penup()
+t.setpos(100,100)
 '''
 #square task
 for i in range(4):
