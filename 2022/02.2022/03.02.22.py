@@ -1,4 +1,3 @@
-from distutils.command.clean import clean
 import random
 def checksum_creditcard(test_number):
     if len(str(test_number)) != 16:
@@ -24,7 +23,7 @@ def checksum_creditcard(test_number):
     else:
         return False
 
-#print(checksum_creditcard(1234567812345678))
+print(checksum_creditcard(1234567812345678))
     
 def arithmetic_test():
     points = 0
