@@ -1,9 +1,6 @@
 import random
 import math
 
-from numpy import character
-
-
 def task_one():
     exit = False
     while not exit:
@@ -82,4 +79,43 @@ def task_three():
     print(f'Skill of character two : {two_skl}')
 
 
-task_three()
+
+def generate_prime(n):
+    output = [True] * n
+    output[0] = False
+    for a in range(2+1, len(output), 2):
+        output[a] = False
+    for i in range(3, math.ceil(n ** 0.5), 2):
+        if output[i-1] == True:
+            output[i-1] = True
+            for k in range(2*i-1, len(output), i):
+                output[k] = False
+    return output
+
+
+def goldbach(n):
+    if n % 2 != 0:
+        print('an odd number inputed')
+        return -1
+    else:
+        primes = generate_prime(n)
+        prime_array = [x+1 for x in range(len(primes)) if primes[x] == True]
+        for p in prime_array:
+            if n - p in prime_array:
+                print('found')
+                print(f'{p} + {n-p} = {n}')
+
+goldbach(576)
+
+def list_of_lists():
+    return sorted([random.sample(list(range(1,100)), random.randint(1,10)) for n in range(random.randint(1,100))], key= lambda x: len(x))
+
+
+def distribute_three(expenses):
+    #expenses is a list of expenses in float format
+
+    total_expenses = sum(expenses)
+    return [math.floor(total_expenses/3*100)/100, math.floor(total_expenses/3*100)/100, total_expenses - 2 * math.floor(total_expenses/3*100)/100]
+
+print(list_of_lists())
+print(f'Everyone pays {distribute_three([1])}')

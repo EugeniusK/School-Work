@@ -1,0 +1,2 @@
+{'str': 10, 'int': 13, 'hp': 10, 'skl': 11, 'cha': 15, 'end': 14, 'agl': 18, 'luc': 11, 'dmg': 19, 'shi': 12, 'den': 13, 'name': 'nina'}
+{'str': 11, 'int': 12, 'hp': 11, 'skl': 11, 'cha': 12, 'end': 12, 'agl': 10, 'luc': 19, 'dmg': 16, 'shi': 11, 'den': 13, 'name': 'richard'}

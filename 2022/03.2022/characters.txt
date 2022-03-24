@@ -1,2 +1,2 @@
-{'str': 10, 'int': 15, 'hp': 10, 'skl': 11, 'cha': 19, 'end': 12, 'agl': 14, 'luc': 11, 'dmg': 11, 'shi': 11, 'den': 10, 'name': 'nina'}
-{'str': 10, 'int': 16, 'hp': 11, 'skl': 15, 'cha': 12, 'end': 11, 'agl': 11, 'luc': 11, 'dmg': 12, 'shi': 10, 'den': 15, 'name': 'richard'}
+{'str': 13, 'int': 12, 'hp': 12, 'skl': 15, 'cha': 12, 'end': 14, 'agl': 13, 'luc': 12, 'dmg': 11, 'shi': 20, 'den': 12, 'name': 'nina'}
+{'str': 12, 'int': 12, 'hp': 16, 'skl': 13, 'cha': 12, 'end': 13, 'agl': 22, 'luc': 12, 'dmg': 11, 'shi': 11, 'den': 13, 'name': 'richard'}
